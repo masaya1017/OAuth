@@ -20,8 +20,8 @@ db = SQLAlchemy()
 migrate = Migrate()
 # blueprintを使用する。
 google_blueprint = make_google_blueprint(
-    client_id="243326269054-5i33l6h1pq7aap90ka4v4qe66h38prka.apps.googleusercontent.com",
-    client_secret="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",
+    client_id="",
+    client_secret="",
     scope=[
         "https://www.googleapis.com/auth/plus.me",
         "https://www.googleapis.com/auth/userinfo.email",
