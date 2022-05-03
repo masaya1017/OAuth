@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+
+<body>
+    <ul class="nav">
+        <li><a href="{{ url_for('app.home') }}">ホーム</a></li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{ url_for('app.logout') }}">ログアウト</a></li>
+        <li><a href="{{ url_for('app.user') }}">ユーザ画面</a></li>
+        {% else %}
+        <li><a href="{{ url_for('app.google_login') }}">google_login</a></li>
+        {% endif %}
+    </ul>
+    {% block content %}
+    {% endblock%}
+</body>
+
+</html>
